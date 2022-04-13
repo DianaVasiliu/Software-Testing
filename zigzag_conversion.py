@@ -20,15 +20,3 @@ def convert(s: str, numRows: int) -> str:
         ans += allList[i]
 
     return ans
-
-
-def zigzag() -> str:
-    file = open("zigzag.txt")
-    data = file.readline()
-    data = data.split()
-    try:
-        initialText = data[0]
-        num = int(data[1])
-        return convert(initialText, num)
-    except ValueError:
-        return "Error: Invalid input"
