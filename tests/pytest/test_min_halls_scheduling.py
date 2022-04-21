@@ -30,8 +30,10 @@ def test_min_halls_scheduling(n: int, data: list[str], expectedIndices: list[int
         end = d[1]
         if not (pattern.fullmatch(start) and pattern.fullmatch(end)):
             assert result == "Error: Invalid input, must match pattern"
+            return
         elif start > end:
             assert result == "Error: Invalid input, must be valid interval"
+            return
 
     indices = []
     for res in result:
@@ -39,4 +41,4 @@ def test_min_halls_scheduling(n: int, data: list[str], expectedIndices: list[int
         for show in res:
             lst.append(show[0])
         indices.append(lst)
-    assert indices.sort() == expectedIndices.sort()
+    assert sorted(indices) == sorted(expectedIndices)
