@@ -1,4 +1,4 @@
-def are_anagrams(str1: str, str2: str):
+def are_anagrams(str1: str, str2: str) -> bool:
     str1 = str1.lower()
     str2 = str2.lower()
     
