@@ -1,11 +1,13 @@
 import pytest
 from anagrams import *
 
+
 @pytest.mark.parametrize(
     ("firstWord", "secondWord", "expected"),
     (
             ("Race", "Care", True),
-            ("supercalifragilisticexpialidocious", "fragile", False)
+            ("Word", "Bird", False),
+            ("supercalifragilisticexpialidocious", "fragile", False),
     )
 )
 def test_zigzag_conversion(firstWord: str, secondWord: str, expected: str):

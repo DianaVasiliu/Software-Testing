@@ -7,6 +7,8 @@ def minimum_halls_scheduling(n: int, data: list[str]):
     for i in range(n):
         line = data[i]
         line = line.split()
+        if len(line) != 2:
+            return "Error: Invalid input, must match pattern"
         startTime = line[0]
         endTime = line[1]
         if not (pattern.fullmatch(startTime) and pattern.fullmatch(endTime)):

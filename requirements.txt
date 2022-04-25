@@ -1,2 +1,7 @@
-pytest
+pytest~=7.1.1
+pytest-reportlog
+pytest-testmon
+pytest-cov
+pytest-watch
 coverage
+hypothesis
