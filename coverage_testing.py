@@ -18,7 +18,6 @@ champagneTower(2, 1, 1)
 
 fractional_knapsack(3, 50, [10, 20, 30], [60, 100, 120])
 
-kthSmallest([1, 1, 2, 6, 2, 4, 4, 7], 4)
 kthSmallest([1.9, 2.7, 3.2], 3)
 kthSmallest([1, 7, 4, 3, 3, 8], 2)
 

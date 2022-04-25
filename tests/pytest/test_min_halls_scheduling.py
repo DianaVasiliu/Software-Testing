@@ -12,12 +12,9 @@ from minimum_halls_scheduling import *
                 "19:00 20:00",
                 "15:40 17:30"
             ], [[2, 4, 3], [0, 1]]),
-            (1, [
-                "15:00 13:00",
-            ], []),
-            (1, [
-                "15:00sd 13:00",
-            ], []),
+            (1, ["15:00 13:00"], []),
+            (1, ["15:00sd 13:00"], []),
+            (1, ["a b c"], [])
     )
 )
 def test_min_halls_scheduling(n: int, data: list[str], expectedIndices: list[int]):
