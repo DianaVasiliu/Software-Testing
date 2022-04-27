@@ -5,9 +5,14 @@ from anagrams import *
     ("firstWord", "secondWord", "expected"),
     (
             ("Race", "Care", True),
-            ("supercalifragilisticexpialidocious", "fragile", False)
+            ("supercalifragilisticexpialidocious", "fragile", False),
+            ("", "", True),
+            ("aaaa", "aaaa", True),
+            ("smaller", "less", False),
+            ("a gentleman", "elegant man", True),
+            
     )
 )
-def test_zigzag_conversion(firstWord: str, secondWord: str, expected: str):
+def test_anagrams(firstWord: str, secondWord: str, expected: str):
     result = are_anagrams(firstWord, secondWord)
     assert result == expected

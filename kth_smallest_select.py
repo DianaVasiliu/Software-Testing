@@ -21,8 +21,10 @@ def pivot_mediana(A):
     return pivot_mediana(mediane)
 
 
-def kthSmallest(n:int, k:int, x:list):
+def kthSmallest(k:int, x:list):
+    if k <= 0 or k > len(x):
+        return -1
     A = []
-    for i in range(n):
+    for i in range(len(x)):
         A.append(x[i])
-    return quickselect(A, k, pivot_mediana)
+    return quickselect(A, k - 1, pivot_mediana)
