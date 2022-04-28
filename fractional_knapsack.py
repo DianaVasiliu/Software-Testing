@@ -1,19 +1,22 @@
-from numpy import number
+def fractional_knapsack(nrObjects: int, W: int, weights: list, values: list) -> float:
+    objects = []
+    for i in range(nrObjects):
+        objects.append((i, weights[i], values[i], values[i]/weights[i]))
 
-def fractional_knapsack(value:list, weight:list, capacity:number):
-    index = list(range(len(value)))
-    # contains ratios of values to weight
-    ratio = [v/w for v, w in zip(value, weight)]
-    # index is sorted according to value-to-weight ratio in decreasing order
-    index.sort(key=lambda i: ratio[i], reverse=True)
- 
-    max_value = 0
-    for i in index:
-        if weight[i] <= capacity:
-            max_value += value[i]
-            capacity -= weight[i]
+    objects.sort(key=lambda x: x[3], reverse=True)
+    knapsack = 0
+    i = 0
+
+    while i < nrObjects and W != 0:
+        obj = objects[i]
+
+        if obj[1] <= W:
+            knapsack += obj[2]
+            W = W - obj[1]
         else:
-            max_value += value[i]*capacity/weight[i]
-            break
- 
-    return max_value
+            knapsack += obj[2] * W / obj[1]
+            W = 0
+
+        i += 1
+
+    return knapsack

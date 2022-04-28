@@ -1,30 +1,27 @@
-import random
-
-def quickselect(A,k,f_pivot = random.choice):
+def quickSelect(A, k, f_pivot):
     pivot = f_pivot(A)
-    L = [x for x in A if x < pivot]
-    E = [x for x in A if x == pivot]
-    H = [x for x in A if x > pivot]
+    less = [x for x in A if x < pivot]
+    equal = [x for x in A if x == pivot]
+    higher = [x for x in A if x > pivot]
 
-    if k < len(L):
-        return quickselect(L,k,f_pivot)
-    elif k < len(L) + len(E):
-        return E[0]
+    if k < len(less):
+        return quickSelect(less, k, f_pivot)
+    elif k <= len(less) + len(equal):
+        return equal[0]
     else:
-        return quickselect(H,k-len(L)-len(E),f_pivot)
+        return quickSelect(higher, k - len(less) - len(equal), f_pivot)
 
-def pivot_mediana(A):
+
+def medianPivot(A):
     if len(A) <= 5:
         return sorted(A)[len(A) // 2]
-    subliste = [sorted(A[i : i+5]) for i in range (0, len(A), 5)]
-    mediane = [subl[len(subl) // 2] for subl in subliste]
-    return pivot_mediana(mediane)
+
+    subLists = [sorted(A[i:i + 5]) for i in range(0, len(A), 5)]
+    medians = [s[len(s) // 2] for s in subLists]
+    return medianPivot(medians)
 
 
-def kthSmallest(k:int, x:list):
+def kthSmallest(x: list[float], k: int) -> float:
     if k <= 0 or k > len(x):
         return -1
-    A = []
-    for i in range(len(x)):
-        A.append(x[i])
-    return quickselect(A, k - 1, pivot_mediana)
+    return quickSelect(x, k, medianPivot)

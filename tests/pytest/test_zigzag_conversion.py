@@ -6,7 +6,7 @@ from zigzag_conversion import *
     ("text", "num", "expected"),
     (
             ("PAYPALISHIRING", 3, "PAHNAPLSIIGYIR"),
-            ("SOFTWARETESTING", 1, "SOFTWARETESTING")
+            ("SOFTWARETESTING", 1, "SOFTWARETESTING"),
     )
 )
 def test_zigzag_conversion(text: str, num: int, expected: str):
