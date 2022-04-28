@@ -5,7 +5,7 @@ from champagne_tower import *
 @pytest.mark.parametrize(
     ("poured", "query_row", "query_glass", "expected"),
     (
-           (25, 6, 1, 0.18750),
+            (25, 6, 1, 0.18750),
             (-2, 0, 0, -1),
             (1, 123, 12, -2),
             (2, 23, 56, -3),

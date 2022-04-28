@@ -224,6 +224,10 @@ coverage.xml
 cover/
 .testmondata
 
+# Mutation reports
+.mutmut-cache
+html/
+
 # Translations
 *.mo
 *.pot

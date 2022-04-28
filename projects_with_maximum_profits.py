@@ -1,16 +1,18 @@
-
-def projects_with_maximum_profits(inc: list, fin:list, profit:list):
-    P = []
-    for i in range(len(inc)):
-        P.append((inc[i], fin[i], profit[i]))
-    n=len(P)
-    ult=[0]*(n+1)
-    cmax=[0]*(n+1)
-    P.sort(key=lambda x:x[1])
-    for i in range(1,n+1):
-        for j in range(i-1,0,-1):
-            if P[i-1][0]>=P[j-1][1]:
-                ult[i]=j
+def projects_with_maximum_profits(starts: list, ends: list, profits: list):
+    projects = []
+    for i in range(len(starts)):
+        projects.append((starts[i], ends[i], profits[i]))
+        
+    n = len(projects)
+    last = [0] * (n + 1)
+    cMax = [0] * (n + 1)
+    projects.sort(key=lambda x: x[1])
+    
+    for i in range(1, n + 1):
+        for j in range(i - 1, 0, -1):
+            if projects[i - 1][0] >= projects[j - 1][1]:
+                last[i] = j
                 break
-        cmax[i]=max(cmax[i-1],P[i-1][2]+cmax[ult[i]])
-    return cmax[n]
+        cMax[i] = max(cMax[i - 1], projects[i - 1][2] + cMax[last[i]])
+        
+    return cMax[n]
