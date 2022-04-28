@@ -10,6 +10,6 @@ from anagrams import *
             ("supercalifragilisticexpialidocious", "fragile", False),
     )
 )
-def test_zigzag_conversion(firstWord: str, secondWord: str, expected: str):
+def test_anagrams(firstWord: str, secondWord: str, expected: str):
     result = are_anagrams(firstWord, secondWord)
     assert result == expected

@@ -1,0 +1,94 @@
+coverage:
+  all_nodes: 0
+  covered_nodes: 0
+mutation_score: 100.0
+mutations:
+- exception_traceback: "firstWord = 'Race', secondWord = 'Care', expected = True\n\
+    \n    @pytest.mark.parametrize(\n        (\"firstWord\", \"secondWord\", \"expected\"\
+    ),\n        (\n                (\"Race\", \"Care\", True),\n                (\"\
+    supercalifragilisticexpialidocious\", \"fragile\", False),\n                (\"\
+    \", \"\", True),\n                (\"aaaa\", \"aaaa\", True),\n              \
+    \  (\"smaller\", \"less\", False),\n                (\"a gentleman\", \"elegant\
+    \ man\", True),\n    \n        )\n    )\n    def test_anagrams(firstWord: str,\
+    \ secondWord: str, expected: str):\n        result = are_anagrams(firstWord, secondWord)\n\
+    >       assert result == expected\nE       AssertionError\n\ntest_anagrams.py:18:\
+    \ AssertionError"
+  killer: test_anagrams.py::test_anagrams[Race-Care-True]
+  module: &id001 !!python/module:anagrams ''
+  mutations:
+  - lineno: 6
+    operator: COI
+  number: 1
+  status: killed
+  tests_run: 1
+  time: 0.20921969413757324
+- exception_traceback: "firstWord = 'Race', secondWord = 'Care', expected = True\n\
+    \n    @pytest.mark.parametrize(\n        (\"firstWord\", \"secondWord\", \"expected\"\
+    ),\n        (\n                (\"Race\", \"Care\", True),\n                (\"\
+    supercalifragilisticexpialidocious\", \"fragile\", False),\n                (\"\
+    \", \"\", True),\n                (\"aaaa\", \"aaaa\", True),\n              \
+    \  (\"smaller\", \"less\", False),\n                (\"a gentleman\", \"elegant\
+    \ man\", True),\n    \n        )\n    )\n    def test_anagrams(firstWord: str,\
+    \ secondWord: str, expected: str):\n        result = are_anagrams(firstWord, secondWord)\n\
+    >       assert result == expected\nE       AssertionError\n\ntest_anagrams.py:18:\
+    \ AssertionError"
+  killer: test_anagrams.py::test_anagrams[Race-Care-True]
+  module: *id001
+  mutations:
+  - lineno: 10
+    operator: COI
+  number: 2
+  status: killed
+  tests_run: 1
+  time: 0.09773421287536621
+- exception_traceback: "firstWord = 'Race', secondWord = 'Care', expected = True\n\
+    \n    @pytest.mark.parametrize(\n        (\"firstWord\", \"secondWord\", \"expected\"\
+    ),\n        (\n                (\"Race\", \"Care\", True),\n                (\"\
+    supercalifragilisticexpialidocious\", \"fragile\", False),\n                (\"\
+    \", \"\", True),\n                (\"aaaa\", \"aaaa\", True),\n              \
+    \  (\"smaller\", \"less\", False),\n                (\"a gentleman\", \"elegant\
+    \ man\", True),\n    \n        )\n    )\n    def test_anagrams(firstWord: str,\
+    \ secondWord: str, expected: str):\n        result = are_anagrams(firstWord, secondWord)\n\
+    >       assert result == expected\nE       AssertionError\n\ntest_anagrams.py:18:\
+    \ AssertionError"
+  killer: test_anagrams.py::test_anagrams[Race-Care-True]
+  module: *id001
+  mutations:
+  - lineno: 6
+    operator: ROR
+  number: 3
+  status: killed
+  tests_run: 1
+  time: 0.11908912658691406
+- exception_traceback: "firstWord = 'Race', secondWord = 'Care', expected = True\n\
+    \n    @pytest.mark.parametrize(\n        (\"firstWord\", \"secondWord\", \"expected\"\
+    ),\n        (\n                (\"Race\", \"Care\", True),\n                (\"\
+    supercalifragilisticexpialidocious\", \"fragile\", False),\n                (\"\
+    \", \"\", True),\n                (\"aaaa\", \"aaaa\", True),\n              \
+    \  (\"smaller\", \"less\", False),\n                (\"a gentleman\", \"elegant\
+    \ man\", True),\n    \n        )\n    )\n    def test_anagrams(firstWord: str,\
+    \ secondWord: str, expected: str):\n        result = are_anagrams(firstWord, secondWord)\n\
+    >       assert result == expected\nE       AssertionError\n\ntest_anagrams.py:18:\
+    \ AssertionError"
+  killer: test_anagrams.py::test_anagrams[Race-Care-True]
+  module: *id001
+  mutations:
+  - lineno: 10
+    operator: ROR
+  number: 4
+  status: killed
+  tests_run: 1
+  time: 0.0977017879486084
+number_of_tests: 6
+targets:
+- anagrams
+tests:
+- name: test_anagrams
+  target: null
+  time: 0.15046286582946777
+time_stats:
+  create_mutant_module: 0.0
+  create_target_ast: 0.011151552200317383
+  mutate_module: 0.661480188369751
+  run_tests_with_mutant: 0.5325114727020264
+total_time: 0.8214681148529053

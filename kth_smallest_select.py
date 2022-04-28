@@ -22,4 +22,6 @@ def medianPivot(A):
 
 
 def kthSmallest(x: list[float], k: int) -> float:
+    if k <= 0 or k > len(x):
+        return -1
     return quickSelect(x, k, medianPivot)
