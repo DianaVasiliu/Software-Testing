@@ -1,0 +1,892 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /><title>Cosmic Ray Report</title></head><body><div class="container"><h1><p class="text-dark">Cosmic Ray Report</p></h1></div><div class="container"><div class="mb-1" id="summary_info___accordion"><div class="card"><a data-toggle="collapse" data-target="#summary_info___collapse_1" aria-expanded="true" aria-controls="summary_info___collapse_1" href="#"><div class="card-header" id="summary_info___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Summary info</h4></button></div></a><div aria-labelledby="summary_info___heading_1" data-parent="#summary_info___accordion" class="collapse show" id="summary_info___collapse_1"><div class="card-body"><p>Date time: 29/04/2022 13:27:20</p><p>Total jobs: 19</p><p>Complete: 19 (100.00%)</p><p>Surviving mutants: 3 (15.79%)</p></div></div></div></div><div class="mb-1" id="job_list___accordion"><div class="card"><a data-toggle="collapse" data-target="#job_list___collapse_1" aria-expanded="false" aria-controls="job_list___collapse_1" href="#"><div class="card-header" id="job_list___heading_1"><button class="btn btn-outline-dark"><h4 class="m-0">Job list</h4></button></div></a><div aria-labelledby="job_list___heading_1" data-parent="#job_list___accordion" class="collapse" id="job_list___collapse_1"><div class="card-body"><div class="text-right mb-1"><div class="mx-1" id="job_item_expand_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('show');"><button class="btn btn-outline-dark"><span>Expand All</span></button></a></div><div class="mx-1" id="job_item_collapse_all"><a href="#" onclick="$('div.job_list___sub_multi_collapse').collapse('hide');"><button class="btn btn-outline-dark"><span>Collapse All</span></button></a></div></div><div class="mb-1" id="job_list___sub_accordion_1"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_1_1" aria-expanded="false" aria-controls="job_list___sub_collapse_1_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_1_1"><button class="btn btn-outline-success"><span class="job_id">1 : Job ID d4a237d5881f4081929132d97f0f6a49</span></button></div></a><div aria-labelledby="job_list___sub_heading_1_1" data-parent="#job_list___sub_accordion_1" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_1_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_NotEq, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) != len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.44s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_2"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_2_1" aria-expanded="false" aria-controls="job_list___sub_collapse_2_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_2_1"><button class="btn btn-outline-success"><span class="job_id">2 : Job ID 2d11ca8c016448f48923e2cda44f9575</span></button></div></a><div aria-labelledby="job_list___sub_heading_2_1" data-parent="#job_list___sub_accordion_2" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_2_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_NotEq, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 != sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py FF.F                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+_______________________ test_anagrams[Word-Bird-False] ________________________
+
+firstWord = 'Word', secondWord = 'Bird', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+________________________ test_anagrams[abc-bcd-False] _________________________
+
+firstWord = 'abc', secondWord = 'bcd', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Word-Bird-False] - assert...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[abc-bcd-False] - assert T...
+========================= 3 failed, 1 passed in 0.27s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_3"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_3_1" aria-expanded="false" aria-controls="job_list___sub_collapse_3_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_3_1"><button class="btn btn-outline-success"><span class="job_id">3 : Job ID d92c241311d24447a81bae7082e617a4</span></button></div></a><div aria-labelledby="job_list___sub_heading_3_1" data-parent="#job_list___sub_accordion_3" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_3_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Lt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) &lt; len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.56s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_4"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_4_1" aria-expanded="false" aria-controls="job_list___sub_collapse_4_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_4_1"><button class="btn btn-outline-success"><span class="job_id">4 : Job ID fbb4736c84f54edb9a4d5263d610ad58</span></button></div></a><div aria-labelledby="job_list___sub_heading_4_1" data-parent="#job_list___sub_accordion_4" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_4_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Lt, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 &lt; sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F..F                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+________________________ test_anagrams[abc-bcd-False] _________________________
+
+firstWord = 'abc', secondWord = 'bcd', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[abc-bcd-False] - assert T...
+========================= 2 failed, 2 passed in 0.33s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_5"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_5_1" aria-expanded="false" aria-controls="job_list___sub_collapse_5_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_5_1"><button class="btn btn-outline-danger"><span class="job_id">5 : Job ID c259c65171034f708df531be06a658d1</span></button></div></a><div aria-labelledby="job_list___sub_heading_5_1" data-parent="#job_list___sub_accordion_5" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_5_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: normal</p><p>test outcome: survived</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_LtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) &lt;= len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py ....                                       [100%]
+
+============================== 4 passed in 0.11s ==============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_6"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_6_1" aria-expanded="false" aria-controls="job_list___sub_collapse_6_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_6_1"><button class="btn btn-outline-success"><span class="job_id">6 : Job ID 95f3f27c4646477cbeeb1404dd7b7aeb</span></button></div></a><div aria-labelledby="job_list___sub_heading_6_1" data-parent="#job_list___sub_accordion_6" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_6_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_LtE, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 &lt;= sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py ...F                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[abc-bcd-False] _________________________
+
+firstWord = 'abc', secondWord = 'bcd', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[abc-bcd-False] - assert T...
+========================= 1 failed, 3 passed in 0.44s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_7"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_7_1" aria-expanded="false" aria-controls="job_list___sub_collapse_7_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_7_1"><button class="btn btn-outline-success"><span class="job_id">7 : Job ID 66535a366bc14bd3a34ecf54268272a2</span></button></div></a><div aria-labelledby="job_list___sub_heading_7_1" data-parent="#job_list___sub_accordion_7" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_7_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Gt, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) &gt; len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.39s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_8"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_8_1" aria-expanded="false" aria-controls="job_list___sub_collapse_8_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_8_1"><button class="btn btn-outline-success"><span class="job_id">8 : Job ID 2753cb02fd3e4226aefd4e8f6153cf97</span></button></div></a><div aria-labelledby="job_list___sub_heading_8_1" data-parent="#job_list___sub_accordion_8" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_8_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Gt, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 &gt; sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py FF..                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+_______________________ test_anagrams[Word-Bird-False] ________________________
+
+firstWord = 'Word', secondWord = 'Bird', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Word-Bird-False] - assert...
+========================= 2 failed, 2 passed in 0.43s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_9"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_9_1" aria-expanded="false" aria-controls="job_list___sub_collapse_9_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_9_1"><button class="btn btn-outline-danger"><span class="job_id">9 : Job ID b9a2269803bd4232ac8c8be18ab94d50</span></button></div></a><div aria-labelledby="job_list___sub_heading_9_1" data-parent="#job_list___sub_accordion_9" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_9_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: normal</p><p>test outcome: survived</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_GtE, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) &gt;= len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py ....                                       [100%]
+
+============================== 4 passed in 0.15s ==============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_10"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_10_1" aria-expanded="false" aria-controls="job_list___sub_collapse_10_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_10_1"><button class="btn btn-outline-success"><span class="job_id">10 : Job ID 05ddbed7309446d5a19e7153a1d5b487</span></button></div></a><div aria-labelledby="job_list___sub_heading_10_1" data-parent="#job_list___sub_accordion_10" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_10_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_GtE, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 &gt;= sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py .F..                                       [100%]
+
+================================== FAILURES ===================================
+_______________________ test_anagrams[Word-Bird-False] ________________________
+
+firstWord = 'Word', secondWord = 'Bird', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Word-Bird-False] - assert...
+========================= 1 failed, 3 passed in 0.41s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_11"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_11_1" aria-expanded="false" aria-controls="job_list___sub_collapse_11_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-danger" id="job_list___sub_heading_11_1"><button class="btn btn-outline-danger"><span class="job_id">11 : Job ID 19e1efad24b3446da4ced411451dd983</span></button></div></a><div aria-labelledby="job_list___sub_heading_11_1" data-parent="#job_list___sub_accordion_11" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_11_1"><div class="card-body"><div class="work-item"><div class="alert alert-danger test-outcome" role="alert"><p>SURVIVED</p><p>worker outcome: normal</p><p>test outcome: survived</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Is, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) is len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py ....                                       [100%]
+
+============================== 4 passed in 0.10s ==============================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_12"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_12_1" aria-expanded="false" aria-controls="job_list___sub_collapse_12_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_12_1"><button class="btn btn-outline-success"><span class="job_id">12 : Job ID 6edbeb0886fb4a31838fb056203bfd97</span></button></div></a><div aria-labelledby="job_list___sub_heading_12_1" data-parent="#job_list___sub_accordion_12" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_12_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_Is, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 is sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.29s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_13"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_13_1" aria-expanded="false" aria-controls="job_list___sub_collapse_13_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_13_1"><button class="btn btn-outline-success"><span class="job_id">13 : Job ID c2d761cde67c4d33932290ead4534ee9</span></button></div></a><div aria-labelledby="job_list___sub_heading_13_1" data-parent="#job_list___sub_accordion_13" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_13_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 17), end pos: (5, 19)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_IsNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if len(str1) is not len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.25s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_14"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_14_1" aria-expanded="false" aria-controls="job_list___sub_collapse_14_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_14_1"><button class="btn btn-outline-success"><span class="job_id">14 : Job ID 3205fe280e184ea3bc7d0f695de71691</span></button></div></a><div aria-labelledby="job_list___sub_heading_14_1" data-parent="#job_list___sub_accordion_14" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_14_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 23), end pos: (9, 25)</button></a></pre><pre>operator: core/ReplaceComparisonOperator_Eq_IsNot, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if sorted_str1 is not sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py .F.F                                       [100%]
+
+================================== FAILURES ===================================
+_______________________ test_anagrams[Word-Bird-False] ________________________
+
+firstWord = 'Word', secondWord = 'Bird', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+________________________ test_anagrams[abc-bcd-False] _________________________
+
+firstWord = 'abc', secondWord = 'bcd', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Word-Bird-False] - assert...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[abc-bcd-False] - assert T...
+========================= 2 failed, 2 passed in 0.38s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_15"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_15_1" aria-expanded="false" aria-controls="job_list___sub_collapse_15_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_15_1"><button class="btn btn-outline-success"><span class="job_id">15 : Job ID 2e62481833e543e1b506a176abbe8143</span></button></div></a><div aria-labelledby="job_list___sub_heading_15_1" data-parent="#job_list___sub_accordion_15" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_15_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=5" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (5, 7), end pos: (5, 29)</button></a></pre><pre>operator: core/AddNot, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -2,7 +2,7 @@
+     str1 = str1.lower()
+     str2 = str2.lower()
+     
+-    if len(str1) == len(str2):
++    if not len(str1) == len(str2):
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.32s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_16"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_16_1" aria-expanded="false" aria-controls="job_list___sub_collapse_16_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_16_1"><button class="btn btn-outline-success"><span class="job_id">16 : Job ID 3a0f2abb9d4e45fe8e937a7625b6416b</span></button></div></a><div aria-labelledby="job_list___sub_heading_16_1" data-parent="#job_list___sub_accordion_16" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_16_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=9" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (9, 11), end pos: (9, 37)</button></a></pre><pre>operator: core/AddNot, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -6,7 +6,7 @@
+         sorted_str1 = sorted(str1)
+         sorted_str2 = sorted(str2)
+ 
+-        if sorted_str1 == sorted_str2:
++        if not sorted_str1 == sorted_str2:
+             return True
+         else:
+             return False</pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py FF.F                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+_______________________ test_anagrams[Word-Bird-False] ________________________
+
+firstWord = 'Word', secondWord = 'Bird', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+________________________ test_anagrams[abc-bcd-False] _________________________
+
+firstWord = 'abc', secondWord = 'bcd', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Word-Bird-False] - assert...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[abc-bcd-False] - assert T...
+========================= 3 failed, 1 passed in 0.30s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_17"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_17_1" aria-expanded="false" aria-controls="job_list___sub_collapse_17_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_17_1"><button class="btn btn-outline-success"><span class="job_id">17 : Job ID 648057ae0f46455692f8a1e5e33c89e5</span></button></div></a><div aria-labelledby="job_list___sub_heading_17_1" data-parent="#job_list___sub_accordion_17" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_17_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=10" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (10, 19), end pos: (10, 23)</button></a></pre><pre>operator: core/ReplaceTrueWithFalse, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -7,7 +7,7 @@
+         sorted_str2 = sorted(str2)
+ 
+         if sorted_str1 == sorted_str2:
+-            return True
++            return False
+         else:
+             return False
+     </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py F...                                       [100%]
+
+================================== FAILURES ===================================
+________________________ test_anagrams[Race-Care-True] ________________________
+
+firstWord = 'Race', secondWord = 'Care', expected = True
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert False == True
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Race-Care-True] - assert ...
+========================= 1 failed, 3 passed in 0.27s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_18"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_18_1" aria-expanded="false" aria-controls="job_list___sub_collapse_18_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_18_1"><button class="btn btn-outline-success"><span class="job_id">18 : Job ID d8cd3ebb7fc049189ae7837735217799</span></button></div></a><div aria-labelledby="job_list___sub_heading_18_1" data-parent="#job_list___sub_accordion_18" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_18_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=12" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (12, 19), end pos: (12, 24)</button></a></pre><pre>operator: core/ReplaceFalseWithTrue, occurrence: 0</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -9,7 +9,7 @@
+         if sorted_str1 == sorted_str2:
+             return True
+         else:
+-            return False
++            return True
+     
+     return False
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py .F.F                                       [100%]
+
+================================== FAILURES ===================================
+_______________________ test_anagrams[Word-Bird-False] ________________________
+
+firstWord = 'Word', secondWord = 'Bird', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+________________________ test_anagrams[abc-bcd-False] _________________________
+
+firstWord = 'abc', secondWord = 'bcd', expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[Word-Bird-False] - assert...
+FAILED tests/pytest/test_anagrams.py::test_anagrams[abc-bcd-False] - assert T...
+========================= 2 failed, 2 passed in 0.32s =========================
+</pre></div></div></div></div></div><div class="mb-1" id="job_list___sub_accordion_19"><div class="card"><a data-toggle="collapse" data-target="#job_list___sub_collapse_19_1" aria-expanded="false" aria-controls="job_list___sub_collapse_19_1" href="#" class="job_list___sub_multi_heading"><div role="alert" class="card-header alert-success" id="job_list___sub_heading_19_1"><button class="btn btn-outline-success"><span class="job_id">19 : Job ID ea0982dccf4b46f9b7bd9401c6fd5541</span></button></div></a><div aria-labelledby="job_list___sub_heading_19_1" data-parent="#job_list___sub_accordion_19" class="collapse job_list___sub_multi_collapse" id="job_list___sub_collapse_19_1"><div class="card-body"><div class="work-item"><div class="alert alert-success test-outcome" role="alert"><p>worker outcome: normal</p><p>test outcome: killed</p></div></div><pre class="location"><a href="pycharm://open?file=anagrams.py&amp;line=14" class="text-secondary"><button class="btn btn-outline-dark">anagrams.py, start pos: (14, 11), end pos: (14, 16)</button></a></pre><pre>operator: core/ReplaceFalseWithTrue, occurrence: 1</pre><div class="alert alert-secondary"><pre class="diff">--- mutation diff ---
+--- aanagrams.py
++++ banagrams.py
+@@ -11,5 +11,5 @@
+         else:
+             return False
+     
+-    return False
++    return True
+ </pre></div><div class="alert alert-secondary"><pre class="diff">============================= test session starts =============================
+platform win32 -- Python 3.8.0, pytest-7.1.2, pluggy-1.0.0
+rootdir: F:\GitHub\Software-Testing
+plugins: anyio-2.2.0, cov-3.0.0, reportlog-0.1.2
+collected 4 items
+
+tests\pytest\test_anagrams.py ..F.                                       [100%]
+
+================================== FAILURES ===================================
+_______ test_anagrams[supercalifragilisticexpialidocious-fragile-False] _______
+
+firstWord = 'supercalifragilisticexpialidocious', secondWord = 'fragile'
+expected = False
+
+    @pytest.mark.parametrize(
+        ("firstWord", "secondWord", "expected"),
+        (
+                ("Race", "Care", True),
+                ("Word", "Bird", False),
+                ("supercalifragilisticexpialidocious", "fragile", False),
+                ("abc", "bcd", False)
+        )
+    )
+    def test_anagrams(firstWord: str, secondWord: str, expected: str):
+        result = are_anagrams(firstWord, secondWord)
+&gt;       assert result == expected
+E       assert True == False
+
+tests\pytest\test_anagrams.py:16: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/pytest/test_anagrams.py::test_anagrams[supercalifragilisticexpialidocious-fragile-False]
+========================= 1 failed, 3 passed in 0.24s =========================
+</pre></div></div></div></div></div></div></div></div></div></div><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script><script type="text/javascript">$('div.job_list___sub_multi_collapse').on('shown.bs.collapse',  function () {    correct_behavior_functional_buttons();  });$('div.job_list___sub_multi_collapse').on('hidden.bs.collapse',  function () {    correct_behavior_functional_buttons();  });function correct_behavior_functional_buttons() {    var expand = false;    var collapse = false;    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'false') {        expand = true;        return false;      };    });    $('a.job_list___sub_multi_heading').each(function(index) {      if ($(this).attr('aria-expanded') == 'true') {        collapse = true;        return false;      };    });    if (expand) {      $('div#job_item_expand_all').css('display', 'inline-block');    } else {      $('div#job_item_expand_all').css('display', 'none');    };    if (collapse) {      $('div#job_item_collapse_all').css('display', 'inline-block');    } else {      $('div#job_item_collapse_all').css('display', 'none');    };  };correct_behavior_functional_buttons();</script></body></html>

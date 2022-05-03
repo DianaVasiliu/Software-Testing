@@ -8,6 +8,7 @@ from anagrams import *
             ("Race", "Care", True),
             ("Word", "Bird", False),
             ("supercalifragilisticexpialidocious", "fragile", False),
+            ("abc", "bcd", False)
     )
 )
 def test_anagrams(firstWord: str, secondWord: str, expected: str):

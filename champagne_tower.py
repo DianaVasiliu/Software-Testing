@@ -9,7 +9,7 @@ def champagneTower(poured: int, query_row: int, query_glass: int) -> float:
     dp = [[0] * k for k in range(1, 101)]
     dp[0][0] = poured
 
-    for r in range(query_row + 1):
+    for r in range(query_row):
         for c in range(r + 1):
             quantity = (dp[r][c] - 1.0) / 2.0
             if quantity > 0:
